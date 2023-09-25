@@ -1,4 +1,4 @@
-> <h1>Otica Nordestina API</h1>
+> <h1>Ótica Nordestina API</h1>
  > Status: desenvolvendo.</br>
  ![CleanArchitecture](https://github.com/nailtonsimoes/otica-nordestina-api/assets/44982114/75207c4f-57a1-46e0-97c0-46a2b8deaf98)
 
