@@ -4,11 +4,17 @@ import com.naisilva.oticanordestina.entity.user.exception.UserNotFoundException;
 import com.naisilva.oticanordestina.entity.user.model.User;
 import com.naisilva.oticanordestina.usecase.user.GetUserByIdUsecase;
 import com.naisilva.oticanordestina.usecase.user.GetUserByIdUsecase.Input;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/users")
+import javax.validation.Valid;
+
+
+@RestController
+@Tag(name = "Buscar usuario por ID")
 public class GetUserByIdController {
     private final GetUserByIdUsecase getUserByIdUsecase;
 
@@ -16,7 +22,9 @@ public class GetUserByIdController {
         this.getUserByIdUsecase = getUserByIdUsecase;
     }
 
-    @GetMapping("/{id}")
+
+    @GetMapping("/v1/users/{id}")
+    @Operation(summary = "Get user by Id.", description = "Faz a busca de um usuario por seu ID")
     public Response getUserById(@PathVariable Long id) throws UserNotFoundException {
         var outPut = getUserByIdUsecase.execute(new Input(id));
 
