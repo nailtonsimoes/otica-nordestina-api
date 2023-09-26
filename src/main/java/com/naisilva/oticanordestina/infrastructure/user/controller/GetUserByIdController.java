@@ -1,4 +1,4 @@
-package com.naisilva.oticanordestina.infrastructure.config.user.controller;
+package com.naisilva.oticanordestina.infrastructure.user.controller;
 
 import com.naisilva.oticanordestina.entity.user.exception.UserNotFoundException;
 import com.naisilva.oticanordestina.entity.user.model.User;

@@ -1,8 +1,7 @@
-package com.naisilva.oticanordestina.infrastructure.config.user.controller;
+package com.naisilva.oticanordestina.infrastructure.user.controller;
 
 import com.naisilva.oticanordestina.usecase.user.CreateUserUsecase;
 import com.sun.istack.NotNull;
-import lombok.experimental.NonFinal;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
