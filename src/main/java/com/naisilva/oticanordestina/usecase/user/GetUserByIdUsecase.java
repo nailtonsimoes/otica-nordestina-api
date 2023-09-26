@@ -3,7 +3,9 @@ package com.naisilva.oticanordestina.usecase.user;
 import com.naisilva.oticanordestina.entity.user.exception.UserNotFoundException;
 import com.naisilva.oticanordestina.entity.user.gateway.UserGateway;
 import com.naisilva.oticanordestina.entity.user.model.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GetUserByIdUsecase {
     private final UserGateway userGateway;
 
