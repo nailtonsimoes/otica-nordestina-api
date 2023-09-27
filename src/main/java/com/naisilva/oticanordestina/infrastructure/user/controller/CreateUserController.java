@@ -1,6 +1,7 @@
 package com.naisilva.oticanordestina.infrastructure.user.controller;
 
 import com.naisilva.oticanordestina.usecase.user.CreateUserUsecase;
+import com.naisilva.oticanordestina.usecase.user.CreateUserUsecase.Input;
 import com.sun.istack.NotNull;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,7 +25,7 @@ public class CreateUserController {
     @Operation(summary = "Create User", description = "Cria um usuario aparti do seu nome e email.")
     @ResponseStatus(HttpStatus.CREATED)
     public void createUser (@RequestBody Request request) {
-        createUser.execute( new CreateUserUsecase.Input(request.name(), request.email()));
+        createUser.execute( new Input(request.name(), request.email()));
     }
 
     public  record Request(

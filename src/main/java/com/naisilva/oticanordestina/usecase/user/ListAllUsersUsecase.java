@@ -1,5 +1,6 @@
 package com.naisilva.oticanordestina.usecase.user;
 
+import com.naisilva.oticanordestina.entity.user.exception.UserNotFoundException;
 import com.naisilva.oticanordestina.entity.user.gateway.UserGateway;
 import org.springframework.stereotype.Service;
 
